@@ -1,0 +1,44 @@
+using DataAccessLayer.DBAccess;
+using DataAccessLayer.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataAccessLayer.Data
+{
+    public class TaskData : ITaskData
+    {
+        private readonly ISqlDataAccess _db;
+
+        public TaskData(ISqlDataAccess db)
+        {
+            _db = db;
+        }
+
+        public Task<IEnumerable<TaskModel>> GetAllTasks() =>
+          _db.LoadData<TaskModel, dynamic>("dbo.GetTaskDetails", null);
+
+        public async Task<TaskModel?> GetTasks(int id)
+        {
+            var result = await _db.LoadData<TaskModel, dynamic>(
+            "dbo.GetTaskByEmployeeId",
+            new { Id = id });
+            return result.FirstOrDefault();
+        }
+
+        public Task InsertTask(TaskModel task) =>
+         _db.SaveData("dbo.InsertTaskDetailsOnly",
+         new { task.AssignerId, task.AssignedToId, task.TaskType, task.Initialization, task.Deadline, task.TaskPriority});
+
+        public Task UpdateTaskDetails(TaskModel task) =>
+             _db.SaveData("dbo.UpdateTaskdetails", task);
+
+        public Task DeleteTasks(int id) =>
+       _db.SaveData("dbo.DeleteTaskdetail", new { Id = id });
+
+
+
+    }
+}
