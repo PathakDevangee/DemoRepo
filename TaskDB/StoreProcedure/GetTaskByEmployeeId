@@ -9,8 +9,9 @@ select E.FirstName ,
 	E.IsManager ,
 	TD.AssignerID ,
 	TD.AssignedToID ,
-	TD.TaskType ,
+	T.Taskname ,
 	TD.Initialization ,
 	TD.Deadline ,
 	TD.TaskPriority ,
-	E.EmpId  from TaskDetails TD inner join Employee E on TD.AssignerID=E.EmpId where TD.AssignerID=E.EmpIdEnd
+	E.EmpId  from TaskDetails TD inner join Employee E on TD.AssignerID=E.EmpId 
+	inner join TaskType T on T.Id=TD.TaskType where TD.AssignerID=E.EmpId
