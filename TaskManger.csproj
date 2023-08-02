@@ -7,11 +7,54 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\TaskManger.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0\TaskManger.GlobalUsings.g.cs" />
+    <Compile Include="obj\Debug\net6.0\TaskManger.MvcApplicationPartsAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\net6.0\staticwebassets.build.json" />
+    <Content Include="obj\Debug\net6.0\TaskManger.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\TaskManger.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataAccess\bin\Debug\net6.0\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="DataAccess\TaskDB\TaskDB.sqlproj.user" />
+    <None Include="obj\Debug\net6.0\apphost.exe" />
+    <None Include="obj\Debug\net6.0\refint\TaskManger.dll" />
+    <None Include="obj\Debug\net6.0\ref\TaskManger.dll" />
+    <None Include="obj\Debug\net6.0\staticwebassets\msbuild.build.TaskManger.props" />
+    <None Include="obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TaskManger.props" />
+    <None Include="obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TaskManger.props" />
+    <None Include="obj\Debug\net6.0\TaskManger.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net6.0\TaskManger.assets.cache" />
+    <None Include="obj\Debug\net6.0\TaskManger.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net6.0\TaskManger.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net6.0\TaskManger.csproj.CopyComplete" />
+    <None Include="obj\Debug\net6.0\TaskManger.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net6.0\TaskManger.dll" />
+    <None Include="obj\Debug\net6.0\TaskManger.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net6.0\TaskManger.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net6.0\TaskManger.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Include="obj\Debug\net6.0\TaskManger.pdb" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\TaskManger.csproj.nuget.g.props" />
+    <None Include="obj\TaskManger.csproj.nuget.g.targets" />
+    <None Include="TaskManger.sln" />
   </ItemGroup>
 
 </Project>

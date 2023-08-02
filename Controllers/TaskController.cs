@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using DataAccessLayer.Data;
+using DataAccessLayer.Models;
 
 namespace TaskManger.Controllers
 {
@@ -21,7 +22,7 @@ namespace TaskManger.Controllers
             try
             {
                 
-                var task = await _data.GetTasks();
+                var task = await _data.GetAllTasks();
               
                 return Ok(task);
             }

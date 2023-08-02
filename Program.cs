@@ -1,5 +1,6 @@
 
 using DataAccessLayer.DBAccess;
+using DataAccessLayer.Data;
 using TaskManger;
 
 var builder = WebApplication.CreateBuilder(args);
