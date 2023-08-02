@@ -1,0 +1,7 @@
+CREATE PROCEDURE [dbo].[DeleteTaskDetail]
+@Id int
+AS
+	
+Begin
+delete  from dbo.TaskDetails where Id=@Id
+End
